@@ -2,6 +2,7 @@ package com.ko.peerzone_android_client;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    Toolbar toolbar;
     ImageButton FAB;
 
 
@@ -18,12 +20,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(R.mipmap.ic_squirrel_circle);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbar.setTitle("peerzone.net");
 
         FAB = (ImageButton) findViewById(R.id.imageButton);
         FAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Toast.makeText(MainActivity.this, "baka!", Toast.LENGTH_SHORT).show();
+
+
             }
         });
     }

@@ -5,14 +5,14 @@
 
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/tool_bar"
 
         ></include>
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -22,6 +22,11 @@
         android:layout_alignParentTop="true"
         android:id="@+id/frameLayout">
 
+        <TextView android:text="@string/peerzone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"/>
+
         <TextView
             android:id="@+id/TextAct1"
             android:layout_width="wrap_content"
@@ -30,8 +35,8 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
-            android:text="OPI is the one and only"
-            android:textSize="25dp" />
+            android:text="GIN"
+            android:textSize="100dp" />
 
         <ImageButton
             android:layout_margin="15dp"
